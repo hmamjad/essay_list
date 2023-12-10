@@ -50,6 +50,29 @@
         });
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+
+{{-- Summer note text editor --}}
+
+<script>
+$(document).ready(function() {
+    $('#summernote1').summernote();
+  });
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#summernote2').summernote();
+  });
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#summernote3').summernote();
+  });
+</script>
+
 
 
 

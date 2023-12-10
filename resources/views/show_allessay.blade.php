@@ -36,6 +36,8 @@
     <div class="contaner">
         <div class="row">
             <div class="col-md-4 offset-4">
+                <a href="{{ route('essay_index')}}">ADD Essay</a>
+                <a href="{{ route('show_allessay')}}">show Essay</a>
                 <h1>Search Essay</h1>
                 <!-- for Searching -->
                 <div class="mb-3">
@@ -45,8 +47,8 @@
             </div>
         </div>
         <div class="row p-2">
-          
-          
+
+
 
 
             <div class="col-md-12">
@@ -73,8 +75,9 @@
 
                             <td>
 
-                                <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="{{ route('essay_edit_form', $data->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="{{ route('essay_delete', $data->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="{{ route('essay_print', $data->id) }}" class="btn btn-sm btn-info">Print Essay</a>
 
                             </td>
                         </tr>

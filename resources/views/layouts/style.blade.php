@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/css/dark-theme.css" />
     <link rel="stylesheet" href="{{ asset('assets') }}/css/semi-dark.css" />
     <link rel="stylesheet" href="{{ asset('assets') }}/css/header-colors.css" />
+
+    {{-- Summer note Test editor --}}
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+   
     <title>Rukada - Responsive Bootstrap 5 Admin Template</title>
 </head>
 
