@@ -38,12 +38,15 @@
             <div class="col-md-4 offset-4">
                 <a href="{{ route('essay_index')}}">ADD Essay</a>
                 <a href="{{ route('show_allessay')}}">show Essay</a>
-                <h1>Search Essay</h1>
+                <h1>Search Edit Essay</h1>
                 <!-- for Searching -->
+                {{-- @foreach ($Alleditdatas as $key => $data) --}}
                 <div class="mb-3">
                     <label for="searchInput" class="form-label">Search:</label>
-                    <input type="text" id="searchInput" class="form-control">
+                    <input type="text" id="searchInput" class="form-control" value="">
                 </div>
+                {{-- @endforeach --}}
+
             </div>
         </div>
         <div class="row p-2">
@@ -65,19 +68,20 @@
                     </tr>
 
 
-                    @foreach ($Alldatas as $key => $data)
+                    @foreach ($Alleditdatas as $key => $data)
+                    
                         <tr class="data-row">
-                            <td>{{ $data['id'] }}</td>
-                            <td>{{ $data['title'] }}</td>
-                            <td>{{ $data['description_1'] }}</td>
-                            <td>{{ $data['description_2'] }}</td>
-                            <td>{{ $data['description_3'] }}</td>
+                            <td>{!! $data['id'] !!}</td>
+                            <td>{!! $data['title'] !!}</td>
+                            <td>{!! $data['description_1'] !!}</td>
+                            <td>{!! $data['description_2'] !!}</td>
+                            <td>{!! $data['description_3'] !!}</td>
 
                             <td>
 
-                                <a href="{{ route('essay_edit_form', $data->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="{{ route('essay_delete', $data->id) }}" class="btn btn-sm btn-danger">Delete</a>
-                                <a href="{{ route('essay_print', $data->id) }}" class="btn btn-sm btn-info">Print Essay</a>
+                                <a href="{{ route('edit_essay_edit_form', $data->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="{{ route('edit_essay_delete', $data->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="{{ route('edit_essay_print', $data->id) }}" class="btn btn-sm btn-info">Print Edited Essay</a>
 
                             </td>
                         </tr>

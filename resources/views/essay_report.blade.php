@@ -248,9 +248,9 @@
                       </table>
                     </td> --}}
 
-                    <h2>{{ $data->title}}</h2>
+                    <h2>{!! $data->title!!}</h2>
 
-                    {{ $data->description_1}}{{ $data->description_2}}{{ $data->description_3}}
+                    {!! $data->description_1!!}{!! $data->description_2!!}{!! $data->description_3!!}
                   </tr>
                   {{-- <tr>
                     <td align="left" style="padding-top: 20px;">

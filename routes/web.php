@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EssayController;
 use App\Http\Controllers\BarcodeController;
+use App\Http\Controllers\EssayUpdateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +30,10 @@ Route::post('/essay-update/{id}',[EssayController::class,'EssayUpdate'])->name('
 Route::get('/essay-print/{id}',[EssayController::class,'EssayPrint'])->name('essay_print');
 
 
+Route::get('/show-alleditessay',[EssayUpdateController::class,'EssayEditAllShow'])->name('show_alleditessay');
+Route::get('/edit_essay-delete/{id}',[EssayUpdateController::class,'Edit_EssayDelete'])->name('edit_essay_delete');
+Route::get('/edit-essay-edit-form/{id}',[EssayUpdateController::class,'EditEssayEditForm'])->name('edit_essay_edit_form');
+Route::post('/edit-essay-update/{id}',[EssayUpdateController::class,'EditEssayUpdate'])->name('edit_essay_update');
+Route::get('/edit_essay-print/{id}',[EssayUpdateController::class,'EditEssayPrint'])->name('edit_essay_print');
 
-Route::get('/qrcode',[BarcodeController::class,'index'])->name('home.index');
+// Route::get('/qrcode',[BarcodeController::class,'index'])->name('home.index'); edit_essay_update 

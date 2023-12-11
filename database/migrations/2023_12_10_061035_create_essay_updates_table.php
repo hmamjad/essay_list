@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('essay_updates', function (Blueprint $table) {
             $table->id();
             $table->string("sl_old");
+            $table->string("updated_id");
             $table->string("user");
             $table->string('title');
             $table->longText('description_1')->nullable();

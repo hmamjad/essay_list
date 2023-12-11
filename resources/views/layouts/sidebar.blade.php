@@ -31,14 +31,21 @@
                 <div class="menu-title">Tables</div>
             </a>
             <ul>
-                <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Add CheckList</a>
+                <li> <a href="{{ route('essay_index')}}"><i class="bx bx-right-arrow-alt"></i>ADD Essay</a>
                 </li>
-                <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Data Table</a>
+
+                <li> <a href="{{ route('show_allessay')}}"><i class="bx bx-right-arrow-alt"></i>show Essay</a>
                 </li>
+
+                <li> <a href="{{ route('show_alleditessay')}}"><i class="bx bx-right-arrow-alt"></i>show Edited Essay</a>
+                </li>
+                {{-- <li> <a href="{{ route('show_allessay')}}"><i class="bx bx-right-arrow-alt"></i>show Essay</a>
+                </li> --}}
             </ul>
         </li>
         
-      
+       
+       
         <li>
             <a href="">
                 <div class="parent-icon"><i class="bx bx-support"></i>

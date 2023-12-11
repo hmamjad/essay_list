@@ -34,9 +34,7 @@
 
             </div>
 
-            <a href="{{ route('essay_index')}}">ADD Essay</a>
-            <a href="{{ route('show_allessay')}}">show Essay</a>
-            {{-- <a href="{{ route(''essay_index'')}}">ADD Essay</a> --}}
+            
 
 
         </div>

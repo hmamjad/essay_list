@@ -65,9 +65,14 @@ class EssayController extends Controller
     public function EssayUpdate(Request $request, string $id)
     {
 
+
+        $id =$request->id;
+        $maxNo= EssayUpdate::where('sl_old', '=', $id)->max('updated_id')+1;
+
         $essay_updates = new EssayUpdate();
 
         $essay_updates->sl_old = $request->serial_old;
+        $essay_updates->updated_id = $maxNo;
         $essay_updates->user = $request->user;
         $essay_updates->title = $request->title;
         $essay_updates->description_1 = $request->description_1;
@@ -76,7 +81,16 @@ class EssayController extends Controller
 
         $essay_updates->save();
 
-        return redirect()->route('show_allessay');
+        
+        // for serch edited part
+        // $lastEssay = DB::table('essay_updates')->orderBy('id', 'desc')->first();
+
+        // $Alleditdatas = EssayUpdate::get();
+
+    //    dd($lastEssay->title);
+
+        return redirect()->route('show_alleditessay');
+        // return view('show_alleditessay',compact('lastEssay','Alleditdatas'));
     }
 
 
